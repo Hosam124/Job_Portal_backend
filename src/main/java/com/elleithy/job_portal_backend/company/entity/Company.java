@@ -1,11 +1,15 @@
-package com.elleithy.job_portal_backend.entity;
+package com.elleithy.job_portal_backend.company.entity;
 import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
 
 import java.math.BigDecimal;
 import java.time.Instant;
 
 @Entity
 @Table(name = "COMPANIES")
+@Getter
+@Setter
 public class Company {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -54,4 +58,5 @@ public class Company {
 
     @Column(name = "UPDATED_BY", length = 20)
     private String updatedBy;
+
 }
